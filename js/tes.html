@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+div {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+div:hover {
+  background: green;
+}
+</style>
+</head>
+<body>
+
+<div></div>
+
+<script type="text/javascript">
+window.onload = function () {
+    var div = document.getElementsByTagName("div")[0];
+    var style = window.getComputedStyle(div, "hover");
+    alert(style.backgroundColor);
+};
+</script>
+</body>
+</html>
