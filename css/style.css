@@ -676,8 +676,7 @@ Home Section
 
 .about-text .skill-item {
     background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
-    padding: 5px 15px;
+    padding: 5px 25px;
     text-transform: capitalize;
     margin: 0 10px 10px 0;
     border-radius: 10px;
@@ -687,7 +686,6 @@ Home Section
 .btns {
     line-height: 1.5;
     background-color: var(--white-alpha-25);
-    border: 1px solid var(--white-alpha-40);
     padding: 10px 28px;
     display: inline-block;
     border-radius: 30px;
