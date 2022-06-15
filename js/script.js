@@ -118,3 +118,58 @@ function changeHoverBtnp() {
 function changeHoverBtnpOut() {
     document.querySelector(".btnp").classList.toggle("btnpc");
 }
+
+switch (tabsContainer) {
+    case navToggler:
+        console.log("nav ")
+        break;
+
+    case aboutSection:
+        console.log("about")
+        break;
+        
+    default:
+        console.log("default")
+}
+
+for(let arr; arr <= 100; ++arr) {
+    console.log(arr);   
+}
+
+// How to Fetch an API | Step #1
+/*
+const userAPI  = "https://jsonplaceholder.typicode.com/users";
+const response = fetch(userAPI).then(response => response.json()).then(dataUser => console.log(dataUser)); format data in json
+const response = fetch(userAPI).then(response => response.text()).then(dataUser => console.log(dataUser)); // format data in text
+*/
+
+// How to Fetch an API | Step #2
+/*
+async function fetchText() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+    let dataUser = await response.text();
+    
+    console.log(dataUser); 
+}
+*/
+
+// How to Fetch an API | Step #3
+
+async function fetchText() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+    
+    console.log(response.status);   // 200
+    console.log(response.statusText); // relative
+    if(response.status === 200) {
+        let dataUser = await response.json();
+        dataUser.forEach(user => {
+            console.log(`${user.id}. ${user.name} : ${user.email}`)
+        });
+        // for (const user in dataUser) {
+        //     console.log(user.name)
+        // }
+    }
+}
+
+// Instance of a Promise
+fetchText();

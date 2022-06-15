@@ -122,6 +122,18 @@ section.fade-out {
     flex-wrap: wrap;
 }
 
+.mt-5 {
+    margin-top: 5rem;
+}
+
+#apiUserData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -171,6 +183,9 @@ section.fade-out {
 button {
     font-family: inherit;
     user-select: none;
+}
+.submit-btn {
+    margin-left: auto;
 }
 .btn {
     line-height: 1.5;
